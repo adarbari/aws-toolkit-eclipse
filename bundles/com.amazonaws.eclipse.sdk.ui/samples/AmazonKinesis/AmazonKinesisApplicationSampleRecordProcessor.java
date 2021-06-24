@@ -94,12 +94,7 @@ public class AmazonKinesisApplicationSampleRecordProcessor implements IRecordPro
                     LOG.warn("Caught throwable while processing record " + record, t);
                 }
 
-                // backoff if we encounter an exception.
-                try {
-                    Thread.sleep(BACKOFF_TIME_IN_MILLIS);
-                } catch (InterruptedException e) {
-                    LOG.debug("Interrupted sleep", e);
-                }
+               
             }
 
             if (!processedSuccessfully) {
