@@ -172,12 +172,7 @@ public class AmazonKinesisApplicationSampleRecordProcessor implements IRecordPro
                 LOG.error("Cannot save checkpoint to the DynamoDB table used by the Amazon Kinesis Client Library.", e);
                 break;
             }
-            try {
-                Thread.sleep(BACKOFF_TIME_IN_MILLIS);
-            } catch (InterruptedException e) {
-                LOG.debug("Interrupted sleep", e);
-                throw(e);
-            }
+       
         }
     }
 }
