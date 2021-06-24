@@ -230,9 +230,7 @@ public class EnvironmentConfigEditorPart extends AbstractEnvironmentConfigEditor
             }
         }
 
-        final ExportTemplateDialog dialog = new ExportTemplateDialog(getSite().getShell(), existingTemplateNames,
-                "newTemplate" + System.currentTimeMillis());
-        dialog.open();
+        final ExportTemplateDialog dialog ;
 
         if ( dialog.getReturnCode() == MessageDialog.OK ) {
 
