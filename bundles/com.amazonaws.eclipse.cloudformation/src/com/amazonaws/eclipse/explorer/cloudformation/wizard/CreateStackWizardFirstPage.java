@@ -671,10 +671,10 @@ class CreateStackWizardFirstPage extends WizardPage {
                 AmazonCloudFormation cf = getCloudFormationClient();
                 validateTemplateResult = cf.validateTemplate(rq);
 
-               // if ( wizard.getDataModel().getMode() == Mode.Update && wizard.getDataModel().getStackName() != LOADING_STACKS ) {
+              {
                     DescribeStacksResult describeStacks = cf.describeStacks(new DescribeStacksRequest()
                             .withStackName(wizard.getDataModel().getStackName()));
-               //     if ( describeStacks.getStacks().size() == 1 ) {
+              {
                         existingStack = describeStacks.getStacks().iterator().next();
                     }
                 }
